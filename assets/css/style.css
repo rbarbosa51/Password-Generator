@@ -126,7 +126,6 @@ button[disabled] {
   background-color: #7777;
   width: 100%;
   height: 100%;
-  /* margin: 10% 10%; */
   position: absolute;
   top: 0;
   left: 0;
@@ -137,15 +136,15 @@ button[disabled] {
   height: 50%;
   background-color: #fff;
   margin: 10% auto;
+  color: hsl(206, 17%, 28%);
   
 }
 .popup-card h2 {
   width: 50%;
-  border: #000 1px solid;
   text-align: center;
   margin: 10px auto;
-  color: hsl(206, 17%, 28%);
 }
+
 .popup-card-item {
   margin: 0.3rem 3rem;
 }
