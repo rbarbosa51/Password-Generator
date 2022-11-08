@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var rangeInput = document.getElementById('passwordLength');
+//Global Variables
+// passwordLength initial value is the center of the slider -- 68
+var passwordLength = 68;
 function generatePassword() {
   return 'Test';
 }
@@ -19,10 +22,9 @@ generateBtn.addEventListener("click", writePassword);
 
 //Add event listener for Password Range input
 rangeInput.addEventListener('change', () => {
-  // var pPlacement = document.getElementById('lengthText');
-  // pPlacement.innerText = rangeInput.value;
-  console.log(`Value is ${rangeInput.value}`);
-  var passLength = document.getElementById('lengthText');
-  passLength.innerText = `Password length of: ${rangeInput.value}`;
-  console.log(passLength.innerText);
+  var lengthText = document.getElementById('lengthText');
+  lengthText.innerText = `Password length of: ${rangeInput.value}`;
+  //Validating the input 
+  passwordLength = rangeInput.value;
+  console.log(`passwordLength value is: ${passwordLength}`);
 })
