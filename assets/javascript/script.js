@@ -52,11 +52,12 @@ function generatePassword() {
     }
     
     //console.log(ComputedSymbols.length);
-    //var IntPassword = 
-
-
-    var RealPassword = ComputedSymbols.join("").toString()
-    //End Actual Password Generation
+    var IntPassword = []
+    for (var i = 0; i < passwordLength; i++) {
+      IntPassword = IntPassword.concat(ComputedSymbols[Math.floor(Math.random() * ComputedSymbols.length)]);
+    }
+    var RealPassword = IntPassword.join("").toString()
+    console.log(`Password is: ${RealPassword}`);
     var passwordText = document.querySelector("#password");
     passwordText.value = RealPassword;
     console.log(RealPassword);
