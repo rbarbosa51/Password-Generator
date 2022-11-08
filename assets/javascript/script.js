@@ -18,10 +18,17 @@ var upperCaseSelected = false;
 var numericSelected = false;
 var specialCaseSelected = false;
 
-var ComputedPassword = "Test";
 
+function createArray(size, array) {
+  var arraySize = array.length;
+  console.log(arraySize);
+  for (var i = 0; i < size; i++) {
+
+  }
+}
 
 function generatePassword() {
+  var ComputedSymbols = [];
   //Actual Password Generation
   if ((lowerCaseSelected === false) && (upperCaseSelected === false) && (numericSelected === false) && (specialCaseSelected === false)) {
     alert("Error, You must select at least one criteria.");
@@ -31,11 +38,28 @@ function generatePassword() {
     var uppercaseLetters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     var numbers = ['0','1','2','3','4','5','6','7','8','9'];
     var specialCharacters = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', '|', '?', ':', ';', '<', '>', '.', '/'];
-    //var 
+    if (lowerCaseSelected === true) {
+      ComputedSymbols = ComputedSymbols.concat(lowercaseLetters);
+    }
+    if (upperCaseSelected === true) {
+      ComputedSymbols = ComputedSymbols.concat(uppercaseLetters);
+    }
+    if (numericSelected === true) {
+      ComputedSymbols = ComputedSymbols.concat(numbers);
+    }
+    if (specialCaseSelected === true) {
+      ComputedSymbols = ComputedSymbols.concat(specialCharacters);
+    }
+    
+    //console.log(ComputedSymbols.length);
+    //var IntPassword = 
+
+
+    var RealPassword = ComputedSymbols.join("").toString()
     //End Actual Password Generation
     var passwordText = document.querySelector("#password");
-    passwordText.value = ComputedPassword;
-    console.log(ComputedPassword);
+    passwordText.value = RealPassword;
+    console.log(RealPassword);
     popup.classList.add('hidden');
   }
   
