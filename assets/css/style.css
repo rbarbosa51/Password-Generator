@@ -137,6 +137,7 @@ button[disabled] {
   height: 50%;
   background-color: #fff;
   margin: 10% auto;
+  
 }
 .popup-card h2 {
   width: 50%;
@@ -144,6 +145,9 @@ button[disabled] {
   text-align: center;
   margin: 10px auto;
   color: hsl(206, 17%, 28%);
+}
+.popup-card-item {
+  margin: 0.3rem 3rem;
 }
 .hidden {
   display: none;
