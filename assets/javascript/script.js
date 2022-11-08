@@ -20,14 +20,25 @@ var specialCaseSelected = false;
 
 var ComputedPassword = "Test";
 
-function generatePassword() {
-  //popup.classList.add('hidden');
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = ComputedPassword;
-  console.log(ComputedPassword);
-  popup.classList.add('hidden');
-  // return 'Test';
+function generatePassword() {
+  //Actual Password Generation
+  if ((lowerCaseSelected === false) && (upperCaseSelected === false) && (numericSelected === false) && (specialCaseSelected === false)) {
+    alert("Error, You must select at least one criteria.");
+    return;
+  } else {
+    var lowercaseLetters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    var uppercaseLetters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+    var specialCharacters = ['~', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', '{', '[', '}', ']', '|', '?', ':', ';', '<', '>', '.', '/'];
+    //var 
+    //End Actual Password Generation
+    var passwordText = document.querySelector("#password");
+    passwordText.value = ComputedPassword;
+    console.log(ComputedPassword);
+    popup.classList.add('hidden');
+  }
+  
 }
 
 // Write password to the #password input
