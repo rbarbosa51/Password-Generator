@@ -146,12 +146,27 @@ button[disabled] {
 }
 
 .popup-card-item {
-  margin: 0.6rem 3rem;
+  margin: 1.3rem 3rem;
 }
 .hidden {
   display: none;
 }
-
+.popup-card-btn {
+  /* border: 1px solid #000; */
+  display: block;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  /* display: inline-block; */
+  font-size: 1.2rem;
+  line-height: 1rem;
+  margin: 30px auto;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+}
 
 
 /* Added End */
