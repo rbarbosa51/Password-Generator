@@ -50,8 +50,6 @@ function generatePassword() {
     if (specialCaseSelected === true) {
       ComputedSymbols = ComputedSymbols.concat(specialCharacters);
     }
-    
-    //console.log(ComputedSymbols.length);
     var IntPassword = []
     for (var i = 0; i < passwordLength; i++) {
       IntPassword = IntPassword.concat(ComputedSymbols[Math.floor(Math.random() * ComputedSymbols.length)]);
@@ -60,7 +58,6 @@ function generatePassword() {
     console.log(`Password is: ${RealPassword}`);
     var passwordText = document.querySelector("#password");
     passwordText.value = RealPassword;
-    console.log(RealPassword);
     popup.classList.add('hidden');
   }
   
