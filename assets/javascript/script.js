@@ -1,10 +1,12 @@
 // Assignment Code
+var popup = document.getElementById('popup');
 var generateBtn = document.querySelector("#generate");
 var rangeInput = document.getElementById('passwordLength');
 var lowerCaseCheckbox = document.getElementById('lowercase');
 var upperCaseCheckbox = document.getElementById('uppercase');
 var numericCheckbox = document.getElementById('numeric');
 var SpecCharCheckbox = document.getElementById('specialcharacters');
+
 
 //Global Variables
 // passwordLength initial value is the center of the slider -- 68
@@ -27,9 +29,13 @@ function writePassword() {
   passwordText.value = password;
 
 }
+function openPopup() {
+  popup.classList.remove('hidden');
+}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", openPopup);
 
 //Add event listener for Password Range input
 rangeInput.addEventListener('change', () => {
