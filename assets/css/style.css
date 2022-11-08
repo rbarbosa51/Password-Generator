@@ -139,7 +139,7 @@ button[disabled] {
   color: hsl(206, 17%, 28%);
   
 }
-.popup-card h2 {
+.popup-card h2, .popup-card p {
   width: 50%;
   text-align: center;
   margin: 10px auto;
