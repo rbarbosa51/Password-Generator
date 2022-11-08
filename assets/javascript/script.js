@@ -1,6 +1,7 @@
 // Assignment Code
 var popup = document.getElementById('popup');
 var generateBtn = document.querySelector("#generate");
+var popupBtnGenerate = document.getElementById('popupBtnGenerate');
 var rangeInput = document.getElementById('passwordLength');
 var lowerCaseCheckbox = document.getElementById('lowercase');
 var upperCaseCheckbox = document.getElementById('uppercase');
@@ -17,8 +18,16 @@ var upperCaseSelected = false;
 var numericSelected = false;
 var specialCaseSelected = false;
 
+var ComputedPassword = "Test";
+
 function generatePassword() {
-  return 'Test';
+  //popup.classList.add('hidden');
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = ComputedPassword;
+  console.log(ComputedPassword);
+  popup.classList.add('hidden');
+  // return 'Test';
 }
 
 // Write password to the #password input
@@ -32,10 +41,15 @@ function writePassword() {
 function openPopup() {
   popup.classList.remove('hidden');
 }
+// function closePopup() {
+//   popup.classList.add('hidden');
+// }
 
 // Add event listener to generate button
 //generateBtn.addEventListener("click", writePassword);
 generateBtn.addEventListener("click", openPopup);
+popupBtnGenerate.addEventListener('click', generatePassword);
+
 
 //Add event listener for Password Range input
 rangeInput.addEventListener('change', () => {
